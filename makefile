@@ -1,10 +1,10 @@
-cc = g++
+cc = gcc
 prom = main
 src = $(shell find ./ -name "*.cpp")
 obj = $(src:%.cpp=%.o) 
 $(prom): $(obj)
-	$(cc) -o $(prom) $(obj) -w
+	g++ -o $(prom) $(obj) -w
 %.o: %.cpp
-	$(cc) -c $< -o $@ -std=c++11 -w
+	gcc -c $< -o $@ -std=c++11 -w
 clean:
 	rm -rf $(obj) $(prom)

@@ -1,12 +1,12 @@
 # HttpClient
 
 Usage:
-add header as "HttpClient.h" and cpp as "Utils.cpp"
+add header as "HttpClient.h"
 
 Declare:
 HttpClient httpclient;
 
-You need to add httprequest as yourselves:
+You need to add http-RequestHeaders as yourselves:
 httpclient.AddRequestHeader("Content-Type","application/x-www-form-urlencoded");
 
 Simply use a string URL to GET:
@@ -18,6 +18,9 @@ Url = "http://tjservice.cn/build";
 map<string, string> data;
 data["campus"] = "1";
 result=httpclient.PostUrl(Url,data);
+
+Use clear to reuse a HttpClient:
+httpclient.clear();
 
 
 
