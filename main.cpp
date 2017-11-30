@@ -30,8 +30,8 @@ int main() {
 		Url = "http://192.168.192.18/include/auth_action.php";
 		map<string, string>data;
 		data["action"] ="login";
-		data["username"] = "1551515";
-		data["password"] = "{B}MzAxMjcx";
+		data["username"] = "";
+		data["password"] = "";
 		data["ac_id"] = "10";
 		data["user_ip"] = userip;
 		data["nas_ip"] = "";
